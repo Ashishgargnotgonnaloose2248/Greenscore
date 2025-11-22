@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- THEME COLORS ---------- */
+@layer base {
+  :root {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 260 95% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 80% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 330 90% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 260 95% 70%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ---------------------------------------------------------
+   🎨 REACTBITS GLASSY PURPLE–PINK BACKGROUND
+---------------------------------------------------------- */
+@layer utilities {
+  .hero-bg {
+    position: relative;
+    background: radial-gradient(circle at 20% 30%, rgba(255, 0, 128, 0.25), transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(80, 0, 255, 0.25), transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(0, 150, 255, 0.15), transparent 70%);
+    background-color: #030014;
+    overflow: hidden;
+  }
+
+  .calculator-bg {
+    position: relative;
+    background: radial-gradient(circle at 15% 50%, rgba(255, 0, 128, 0.15), transparent 55%),
+                radial-gradient(circle at 85% 20%, rgba(80, 0, 255, 0.20), transparent 60%),
+                radial-gradient(circle at 70% 80%, rgba(0, 150, 255, 0.15), transparent 65%);
+    background-color: #030014;
+    overflow: hidden;
+  }
+}
