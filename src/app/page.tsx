@@ -20,7 +20,7 @@ export default function Home() {
       {/* 🌈 Aurora Background - FULL PAGE */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <Aurora
-          colorStops={["#3A29FF", "#6EEB83", "#3A29FF"]}
+          colorStops={["#000000", "#000000", "#000000"]}
           blend={0.1}
           amplitude={1.1}
           speed={0.6}
