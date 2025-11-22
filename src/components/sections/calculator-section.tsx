@@ -55,18 +55,13 @@ export const CalculatorSection = React.forwardRef<HTMLDivElement, Record<string,
       setResult(null);
 
       try {
-        const response = await fetch(
-          'https://serverless.roboflow.com/greenscore/workflows/detect-count-and-visualize-4',
-          {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              api_key: 'YOUR_API_KEY',
-              options: { show_labels: false, show_confidence: false, confidence_threshold: 0.2 },
-              inputs: { image: { type: 'base64', value: imageDataUri.split(',')[1] } },
-            }),
-          }
-        );
+        const response = await fetch("/api/greenscore", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    image: imageDataUri.split(",")[1],
+  }),
+});
 
         const text = await response.text();
         let rf;
